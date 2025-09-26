@@ -1,1 +1,1 @@
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://abu85.github.io/git-github-workshop/sitemap.xml

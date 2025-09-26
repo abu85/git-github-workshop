@@ -2,8 +2,8 @@ project:
   type: website
   output-dir: docs
 website:
-  site-url: "https://yourdomain.com"
-  description: "Personal website of a biologist and bioinformatician"
+  site-url: "https://abu85.github.io/git-github-workshop/"
+  description: "version control"
   favicon: "images/favicon.ico"
 
   navbar:
@@ -44,14 +44,6 @@ website:
             href: episodes/13-hosting.qmd
           - text: "14 - RStudio Tips"
             href: episodes/14-supplemental-rstudio.qmd
-#      - text: "Git"
-#        href: ./scripts/01_intro_to_git.html
-#      - text: "GitHub"
-#        href: ./scripts/02_intro_to_github.html
-#      - text: "Lab 1"
-#        href: ./scripts/03_repo_making.html
-#      - text: "Lab 2"
-#        href: ./scripts/04_website.html
     right:
       - icon: envelope
         href: mailto:abu.siddique@slu.se
