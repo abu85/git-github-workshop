@@ -8,6 +8,7 @@ website:
 
   navbar:
     background: primary
+    pinned: true
     search: true
     left:
       - text: "Home"
