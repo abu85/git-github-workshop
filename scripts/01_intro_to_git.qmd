@@ -1,0 +1,57 @@
+## Intro to Linux (under development)
+
+### Topics 
+
+0. Setup: Installation
+1. Introducing the Shell: What & Why shell? CLI vs GUI
+2. Navigating Files and Directories
+3. Working With Files and Directories
+4. Pipes 
+6. Shell Scripts
+7. Finding Things
+
+### Tasks 
+
+- open the terminal or wsl command line
+- where am I (print working directory)
+- create a directory (folder)
+- change working directory to the new directory
+- absolute/relative paths of that directory
+- list view (different styles)
+- arguments
+- copy and paste
+- move
+- rename
+- delete files or folders
+- download tools
+- unzip or extract
+
+
+### Basic linux commands 
+ls, cd, pwd, mkdir, cp, mv, rm.
+
+
+### Workshop oriented commands
+
+`ls` , `cd`, `mkdir`, `wget` (for plinks tool), `tar` or `unzip`, `nano`, `less`, `head`, use of `\`, arguments,
+
+### Advanced commands
+
+- `less` – view a file
+- `nano` – view and edit a file
+- `head` / `tail`
+- `grep`
+- `find`
+- `wildcards`
+- tab completion – use it!!!
+- `man` – manual pages or
+- anycommand `--help`
+
+### Example
+```bash
+ls
+```
+
+
+#### Tools: [Plink](https://zzz.bwh.harvard.edu/plink/dist/plink-latest.zip)
+

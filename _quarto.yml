@@ -1,0 +1,70 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  site-url: "https://yourdomain.com"
+  description: "Personal website of a biologist and bioinformatician"
+  favicon: "images/favicon.ico"
+
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Precourse"
+        href: ./scripts/00_precourse.html
+        text: "Episodes"
+        menu:
+          - text: "01 - Git Basics"
+            href: episodes/01-basics.md
+          - text: "02 - Setup"
+            href: episodes/02-setup.md
+          - text: "03 - Create Repo"
+            href: episodes/03-create.md
+          - text: "04 - Track Changes"
+            href: episodes/04-changes.md
+          - text: "05 - History"
+            href: episodes/05-history.md
+          - text: "06 - Ignore Files"
+            href: episodes/06-ignore.md
+          - text: "07 - GitHub"
+            href: episodes/07-github.md
+          - text: "08 - Collaboration"
+            href: episodes/08-collab.md
+          - text: "09 - Conflict Resolution"
+            href: episodes/09-conflict.md
+          - text: "10 - Open Source"
+            href: episodes/10-open.md
+          - text: "11 - Licensing"
+            href: episodes/11-licensing.md
+          - text: "12 - Citation"
+            href: episodes/12-citation.md
+          - text: "13 - Hosting"
+            href: episodes/13-hosting.md
+          - text: "14 - RStudio Tips"
+            href: episodes/14-supplemental-rstudio.md
+      - text: "Git"
+        href: ./scripts/01_intro_to_git.html
+      - text: "GitHub"
+        href: ./scripts/02_intro_to_github.html
+      - text: "Lab 1"
+        href: ./scripts/03_repo_making.html
+      - text: "Lab 2"
+        href: ./scripts/04_website.html
+    right:
+      - icon: softwerecarpentry
+        href: https://swcarpentry.github.io/shell-novice/
+      - icon: envelope
+        href: mailto:your.email@example.com
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: github
