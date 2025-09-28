@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Git & github workshop",
     "section": "",
-    "text": "Welcome to the Day1"
+    "text": "Welcome to the workshop"
   },
   {
     "objectID": "index.html#before-day-1",
@@ -32,7 +32,7 @@
     "href": "index.html#course-materieals",
     "title": "Git & github workshop",
     "section": "📚 Course materieals",
-    "text": "📚 Course materieals\n\n\n\n\n\n\n👉️ Course materieals\n\n\n\n\n\n\n1. Download this repository:\nwget https://github.com/abu85/intro-to-linux-and-R/archive/refs/heads/main.zip . # download with 'wget' command\n\n\n2. Extract and enter into the repository folder📁\n\nunzip main.zip            # extract everything from the zip file to folder\n\nls                        # see the file folder\n\ncd intro-to-linux-and-R   # change and enter into the folder(directory)\nOr Clone this repository if are using (git):\ngit clone https://github.com/YOUR_USERNAME/intro-to-R-genomic-selection.git\ncd intro-to-linux-and-R\n\n\n📚 Contents of the 📁 intro-to-linux-and-R\nls -la         # see the content\nIt will be look like as follows\n_quarto.yml _quarto_old.yml\ndocs\nindex_files practicals.md\nslides _quarto_new.txt _site index.qmd practicals scripts\nstyles.css\n\nImportant folders for you\n\nslides/: Lecture slides\nscripts/: Lecture R scripts for each topic\nPracticals: RMarkdown files for hands-on exercises\npracticals/: Sample genotype and phenotype datasets\n\n\n\n3. Open the project in RStudio.\n\n\n4. Install required packages:\ninstall.packages(c(\"tidyverse\"??????)) \n\n\n5. After Lunch (Start with the practicals in the practicals/ folder.)\n\n\n6. Extras:\n\nresources/: Additional resources and cheat sheets\nsolutions/: Solutions to practical exercises\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\n📬 For questions or feedback, contact at abu.siddique@slu.se"
+    "text": "📚 Course materieals\n\nGit Basics: Automated Version Control\nSetup: Setting up git\nCreating repo: Creating a Repository"
   },
   {
     "objectID": "index.html#for-questions-or-feedback-contact-at-abu.siddiqueslu.se",
@@ -46,7 +46,7 @@
     "href": "index.html#license",
     "title": "Git & github workshop",
     "section": "License",
-    "text": "License\nThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+    "text": "License\nThis workshop is built from softwaerecarpentry lessons This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
   },
   {
     "objectID": "slides/slides.html",
@@ -72,14 +72,14 @@
   {
     "objectID": "scripts/01_intro_to_git.html",
     "href": "scripts/01_intro_to_git.html",
-    "title": "",
+    "title": "Version Control with Git",
     "section": "",
     "text": "Setup: Installation\nIntroducing the Shell: What & Why shell? CLI vs GUI\nNavigating Files and Directories\nWorking With Files and Directories\nPipes\nShell Scripts\nFinding Things\n\n\n\n\n\nopen the terminal or wsl command line\nwhere am I (print working directory)\ncreate a directory (folder)\nchange working directory to the new directory\nabsolute/relative paths of that directory\nlist view (different styles)\narguments\ncopy and paste\nmove\nrename\ndelete files or folders\ndownload tools\nunzip or extract\n\n\n\n\nls, cd, pwd, mkdir, cp, mv, rm.\n\n\n\nls , cd, mkdir, wget (for plinks tool), tar or unzip, nano, less, head, use of \\, arguments,\n\n\n\n\nless – view a file\nnano – view and edit a file\nhead / tail\ngrep\nfind\nwildcards\ntab completion – use it!!!\nman – manual pages or\nanycommand --help\n\n\n\n\nls"
   },
   {
     "objectID": "scripts/01_intro_to_git.html#intro-to-linux-under-development",
     "href": "scripts/01_intro_to_git.html#intro-to-linux-under-development",
-    "title": "",
+    "title": "Version Control with Git",
     "section": "",
     "text": "Setup: Installation\nIntroducing the Shell: What & Why shell? CLI vs GUI\nNavigating Files and Directories\nWorking With Files and Directories\nPipes\nShell Scripts\nFinding Things\n\n\n\n\n\nopen the terminal or wsl command line\nwhere am I (print working directory)\ncreate a directory (folder)\nchange working directory to the new directory\nabsolute/relative paths of that directory\nlist view (different styles)\narguments\ncopy and paste\nmove\nrename\ndelete files or folders\ndownload tools\nunzip or extract\n\n\n\n\nls, cd, pwd, mkdir, cp, mv, rm.\n\n\n\nls , cd, mkdir, wget (for plinks tool), tar or unzip, nano, less, head, use of \\, arguments,\n\n\n\n\nless – view a file\nnano – view and edit a file\nhead / tail\ngrep\nfind\nwildcards\ntab completion – use it!!!\nman – manual pages or\nanycommand --help\n\n\n\n\nls"
   },
@@ -492,28 +492,28 @@
   {
     "objectID": "scripts/00_precourse.html",
     "href": "scripts/00_precourse.html",
-    "title": "",
+    "title": "Setup",
     "section": "",
-    "text": "Install or activate WSL or Unix, and install R and RStudio if you do not have them already before 1st meeting.\nWe strongly recommend for those not yet familiar with UNIX and/or R to take this opportunity and take these online tutorials, since those are requirements for the workshop. This will help you to develop your programming skills and we can always learn a few tricks here and there, even if you are already experienced.\n\n\n\n\n\n\n\n\nTask & Tools\nNote\nLink\n\n\n\n\nBook Reading (pdf)\nchapter 1-9\nA (very) short introduction to R.pdf\n\n\nInstall & activate WSL or Unix\nFor Windows user only\nUNIX\n\n\nInstall R itself and RStudio Desktop\nall participants\nR & RStudio\n\n\n\nhttps://swcarpentry.github.io/git-novice/04-changes.html"
+    "text": "In this lesson we use Git from the Unix Shell. Some previous experience with the shell is expected, but isn’t mandatory. We may need R and RStudio who wants to generate website through github."
   },
   {
     "objectID": "scripts/00_precourse.html#precourse-materials",
     "href": "scripts/00_precourse.html#precourse-materials",
-    "title": "",
+    "title": "Setup",
     "section": "",
-    "text": "Install or activate WSL or Unix, and install R and RStudio if you do not have them already before 1st meeting.\nWe strongly recommend for those not yet familiar with UNIX and/or R to take this opportunity and take these online tutorials, since those are requirements for the workshop. This will help you to develop your programming skills and we can always learn a few tricks here and there, even if you are already experienced.\n\n\n\n\n\n\n\n\nTask & Tools\nNote\nLink\n\n\n\n\nBook Reading (pdf)\nchapter 1-9\nA (very) short introduction to R.pdf\n\n\nInstall & activate WSL or Unix\nFor Windows user only\nUNIX\n\n\nInstall R itself and RStudio Desktop\nall participants\nR & RStudio\n\n\n\nhttps://swcarpentry.github.io/git-novice/04-changes.html"
+    "text": "Install or activate WSL or Unix, and install R and RStudio if you do not have them already before 1st meeting.\nWe strongly recommend for those not yet familiar with UNIX and/or R to take this opportunity and take these online tutorials, since those are requirements for the workshop. This will help you to develop your programming skills and we can always learn a few tricks here and there, even if you are already experienced."
   },
   {
     "objectID": "scripts/02_intro_to_github.html",
     "href": "scripts/02_intro_to_github.html",
-    "title": "",
+    "title": "Version Control with Git",
     "section": "",
     "text": "About R, R vs Rstudio, Timeline\nSetting a project or working directory\nInteracting with R\nPackages\nAssign values or objects\nData types, structures\nHow to import and export data or results\nHandle large data sets\nHousekeeping\nOutliers\n\n\n\n\n\nset working directory,\nprint path of the current working directory,\nupload data,\nsubset data,\ntidy data\ntransform data,\nplot,\nsaving plot\n\n\n\n\nsetwd, getwd, read_table, read_csv, pvot_longer, pvot_wider, select, mutate, summarize, summary.\n\n\n\nInstall Tidyverse package\ninstall.packages(\"tidyverse\")\n\nlibrary(\"tidyverse\")\n\n\n\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00"
   },
   {
     "objectID": "scripts/02_intro_to_github.html#intro-to-r-under-development",
     "href": "scripts/02_intro_to_github.html#intro-to-r-under-development",
-    "title": "",
+    "title": "Version Control with Git",
     "section": "",
     "text": "About R, R vs Rstudio, Timeline\nSetting a project or working directory\nInteracting with R\nPackages\nAssign values or objects\nData types, structures\nHow to import and export data or results\nHandle large data sets\nHousekeeping\nOutliers\n\n\n\n\n\nset working directory,\nprint path of the current working directory,\nupload data,\nsubset data,\ntidy data\ntransform data,\nplot,\nsaving plot\n\n\n\n\nsetwd, getwd, read_table, read_csv, pvot_longer, pvot_wider, select, mutate, summarize, summary.\n\n\n\nInstall Tidyverse package\ninstall.packages(\"tidyverse\")\n\nlibrary(\"tidyverse\")\n\n\n\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00"
   },
@@ -544,5 +544,96 @@
     "title": "Tracking Changes",
     "section": "Objectives",
     "text": "Objectives\n\n\n\n\n\n\nObjectives\n\n\n\n\nGo through the modify-add-commit cycle for one or more files.\nExplain where information is stored at each stage of that cycle.\nDistinguish between descriptive and non-descriptive commit messages.\n\n\n\nFirst let’s make sure we’re still in the right directory. You should be in the recipes directory.\n$ cd ~/Desktop/recipes\nLet’s create a file called guacamole.md that contains the basic structure of our first recipe. We’ll use nano to edit the file; you can use whatever editor you like. In particular, this does not have to be the core.editor you set globally earlier. But remember, the steps to create or edit a new file will depend on the editor you choose (it might not be nano). For a refresher on text editors, check out “Which Editor?” in The Unix Shell lesson.\n$ nano guacamole.md\nType the text below into the guacamole.md file:\n# Guacamole\n## Ingredients\n## Instructions\nSave the file and exit your editor."
+  },
+  {
+    "objectID": "index.html#course-overview",
+    "href": "index.html#course-overview",
+    "title": "Git & github workshop",
+    "section": "📚 Course Overview",
+    "text": "📚 Course Overview\nGit and github in a nutshell:\n\n\n\n\n\nflowchart LR\n  A[Directory] --&gt; B(Stage)\n  B --&gt; C{Repository }\n  C --&gt; D[Remote or github]\n  \n\n\n\n\n\n\nCommands (git ...): which command works where?\n\n\n\n\n\nsequenceDiagram\n  participant Directory\n  participant Stage\n  participant Repository\n  Note left of Directory: git init\n  Directory-&gt;&gt;Stage: git add\n  Stage-&gt;&gt;Repository: git commit\n  Repository-&gt;&gt;Remote: git push\n\n\n\n\n\n\n\n\nIf you change anything at remote (github) then pull(fetch) changes at every level and repeat the cycle:\n\n\n\n\n\nflowchart LR\n  A[Directory] --&gt; B(Stage)\n  B --&gt; C{Repository }\n  C --&gt; D[Remote or github]\n  D --&gt; A[Directory]\n\n\n\n\n\n\n\n\n\n\n\nsequenceDiagram\n  participant Directory\n  participant Stage\n  participant Repository\n  participant Remote\n  Note left of Directory: git init\n  Note right of Directory: git status &lt;br/&gt;git branch &lt;br/&gt;git checkout\n  Directory-&gt;&gt;Stage: git add\n  Stage-&gt;&gt;Repository: git commit\n  Repository-&gt;&gt;Remote: git push\n  Remote-&gt;&gt;Directory: git pull\n\n\n\n\n\n\n\nIf you are a team of two people, you may like to work independently and then merge all:\n\n\n\n\n\nflowchart LR\n  A[Directory] --&gt; B(Stage 1)\n  A[Directory] --&gt; C(Stage 2)\n  B --&gt; D{Repository 1}\n  C --&gt; E{Repository 2}\n  D --&gt; F[Merge repository]\n  E --&gt; F[Merge repository]\n  F --&gt; G[Remote or Github]\n  G --&gt; A[Directory]\n\n\n\n\n\n\n\n\n\n\n\nsequenceDiagram\n  participant Directory\n  participant Stage\n  participant Repository\n  participant Remote\n\n  Directory-&gt;&gt;Directory: git init\n  loop check changes\n    Directory-&gt;&gt;Directory: git status\n  end\n  \n  loop check branches\n    Directory-&gt;&gt;Directory: git branch \n  end\n  \n  loop create branches\n    Directory-&gt;&gt;Directory: git checkout -b new_branch \n  end\n  \n  Directory-&gt;&gt;Stage: git add\n  Stage-&gt;&gt;Repository: git commit\n  Directory-&gt;&gt;Directory: git checkout main\n  Repository-&gt;&gt;Repository: git merge new_branch\n  Repository-&gt;&gt;Remote: git push\n  Remote--&gt;&gt;Directory: git pull\n\n\n\n\n\n\n\nIf you like to download your latest remote(github) repo to somewhere in your computer\n\n\n\n\n\nflowchart TD\n  A[Remote or github] --&gt; |git clone| B[New repository]\n\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\n📬 For questions or feedback, contact at abu.siddique@slu.se"
+  },
+  {
+    "objectID": "index.html#course-chapters",
+    "href": "index.html#course-chapters",
+    "title": "Git & github workshop",
+    "section": "📚 Course Chapters",
+    "text": "📚 Course Chapters\n\n01-basics: Automated Version Control\n02-setup: Setting up git\n03-create: Creating a Repository\n04-changes: Tracking Changes\n05-history: Exploring History\n06-ignore: Ignoring Things\n07-github: Remotes in GitHub\n08-collab: Collaborating\n09-conflict: Conflicts resolution\n10-open: Open Science\n11-licensing: Licensing\n12-citation: Citation\n13-hosting: Hosting\n14-supplemental-rstudio: Using Git from RStudio"
+  },
+  {
+    "objectID": "index.html#before-1st-meeting",
+    "href": "index.html#before-1st-meeting",
+    "title": "Git & github workshop",
+    "section": "🧰 Before 1st meeting",
+    "text": "🧰 Before 1st meeting\nRead the pre-course ⬆️ and be prepared accordingly. You need following tools in the day 1:\n\n\n\n\n\n\n👉Tools\n\n\n\n\n\n\nWSL/Unix/Ubuntu/Shell The Unix Shell tutorial\nR (version ≥ 4.4)\nRStudio"
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Git & github workshop",
+    "section": "📅 Schedule",
+    "text": "📅 Schedule\n\n\n\n\n\n\n\n\nDay 1, Time duration\nTopic\nInstructor\n\n\n\n\n00.00-01.30\nGit\nAbu\n\n\n01.30-02.30\nGithub\nAbu\n\n\n02.30-03.30\nOthers\nAbu\n\n\n\n\nPrerequisites\nIn this workshop we use Git from the Unix Shell. Some previous experience with the shell is expected, but isn’t mandatory."
+  },
+  {
+    "objectID": "index.html#at-1st-meeting",
+    "href": "index.html#at-1st-meeting",
+    "title": "Git & github workshop",
+    "section": "🟢At 1st meeting",
+    "text": "🟢At 1st meeting\nGithub, Git, Lab. See up, bar headers ⬆️"
+  },
+  {
+    "objectID": "index.html#course-episodes-chapters",
+    "href": "index.html#course-episodes-chapters",
+    "title": "Git & github workshop",
+    "section": "📚 Course Episodes (Chapters)",
+    "text": "📚 Course Episodes (Chapters)\nSee the ‘Episode’ section (bars) - 01-basics: Automated Version Control - 02-setup: Setting up git - 03-create: Creating a Repository - 04-changes: Tracking Changes - 05-history: Exploring History - 06-ignore: Ignoring Things - 07-github: Remotes in GitHub - 08-collab: Collaborating - 09-conflict: Conflicts resolution - 10-open: Open Science - 11-licensing: Licensing - 12-citation: Citation - 13-hosting: Hosting - 14-supplemental-rstudio: Using Git from RStudio"
+  },
+  {
+    "objectID": "scripts/00_precourse.html#installing-git",
+    "href": "scripts/00_precourse.html#installing-git",
+    "title": "Setup",
+    "section": "Installing Git",
+    "text": "Installing Git\nSince several Carpentries lessons rely on Git, please see this section of the workshop template for instructions on installing Git for various operating systems.\n\nGit installation on Windows\nGit installation on MacOS\nGit installation on Linux"
+  },
+  {
+    "objectID": "scripts/00_precourse.html#creating-a-github-account",
+    "href": "scripts/00_precourse.html#creating-a-github-account",
+    "title": "Setup",
+    "section": "Creating a GitHub Account",
+    "text": "Creating a GitHub Account\nYou will need an account for GitHub to follow episodes 7 & 8 in this lesson.\n\nGo to https://github.com and follow the “Sign up” link at the top-right of the window.\nFollow the instructions to create an account.\nVerify your email address with GitHub.\nConfigure multifactor authentication (see below).\n\n\nMulti-factor Authentication\nIn 2023, GitHub introduced a requirement for all accounts to have multi-factor authentication (2FA) configured for extra security. Several options exist for setting up 2FA, which are summarised here:\n\nIf you already use an authenticator app, like Google Authenticator or Duo Mobile on your smartphone for example, add GitHub to that app.\nIf you have access to a smartphone but do not already use an authenticator app, install one and add GitHub to the app.\nIf you do not have access to a smartphone or do not want to install an authenticator app, you have two options:\n\nset up 2FA via text message (list of countries where authentication by SMS is supported), or\nuse a hardware security key like YubiKey or the Google Titan key.\n\n\nThe GitHub documentation provides more details about configuring 2FA."
+  },
+  {
+    "objectID": "scripts/00_precourse.html#preparing-your-working-directory",
+    "href": "scripts/00_precourse.html#preparing-your-working-directory",
+    "title": "Setup",
+    "section": "Preparing Your Working Directory",
+    "text": "Preparing Your Working Directory\nWe’ll do our work in the Desktop folder so make sure you change your working directory to it with:\ncd\ncd Desktop\n\nR and Rstudio installation:\n\n\n\nTask & Tools\nNote\nLink\n\n\n\n\nInstall & activate WSL or Unix\nFor Windows user only\nUNIX\n\n\nInstall R itself and RStudio Desktop\nall participants\nR & RStudio"
+  },
+  {
+    "objectID": "scripts/00_precourse.html#summary-and-setup",
+    "href": "scripts/00_precourse.html#summary-and-setup",
+    "title": "Setup",
+    "section": "",
+    "text": "Jimmy and Alfredo have been hired by Ratatouille restaurant (a special restaurant from Euphoric State University) to investigate if it is possible to make the best recipes archive ever. They want to be able to work on indexing the prices at the same time, but they have run into problems doing this in the past. If they take turns, each one will spend a lot of time waiting for the other to finish, but if they work on their own copies and email changes back and forth things will be lost, overwritten, or duplicated.\nA colleague suggests using version control to manage their work. Version control is better than mailing files back and forth:\nNothing that is committed to version control is ever lost, unless you work really, really hard at losing it. Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.\nAs we have this record of who made what changes when, we know who to ask if we have questions later on, and, if needed, revert to a previous version, much like the “undo” feature in an editor.\nWhen several people collaborate in the same project, it’s possible to accidentally overlook or overwrite someone’s changes. The version control system automatically notifies users whenever there’s a conflict between one person’s work and another’s.\nTeams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).\nVersion control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system.\n\n\nIn this lesson we use Git from the Unix Shell. Some previous experience with the shell is expected, but isn’t mandatory."
+  },
+  {
+    "objectID": "episodes/00-summary.html",
+    "href": "episodes/00-summary.html",
+    "title": "Summary",
+    "section": "",
+    "text": "Jimmy and Alfredo have been hired by Ratatouille restaurant (a special restaurant from Euphoric State University) to investigate if it is possible to make the best recipes archive ever. They want to be able to work on indexing the prices at the same time, but they have run into problems doing this in the past. If they take turns, each one will spend a lot of time waiting for the other to finish, but if they work on their own copies and email changes back and forth things will be lost, overwritten, or duplicated.\nA colleague suggests using version control to manage their work. Version control is better than mailing files back and forth:\nNothing that is committed to version control is ever lost, unless you work really, really hard at losing it. Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.\nAs we have this record of who made what changes when, we know who to ask if we have questions later on, and, if needed, revert to a previous version, much like the “undo” feature in an editor.\nWhen several people collaborate in the same project, it’s possible to accidentally overlook or overwrite someone’s changes. The version control system automatically notifies users whenever there’s a conflict between one person’s work and another’s.\nTeams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).\nVersion control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system.\n\n\nIn this lesson we use Git from the Unix Shell. Some previous experience with the shell is expected, but isn’t mandatory.\nSo read pre-course material and install tools needed."
+  },
+  {
+    "objectID": "episodes/00-summary.html#summary-and-setup",
+    "href": "episodes/00-summary.html#summary-and-setup",
+    "title": "Summary",
+    "section": "",
+    "text": "Jimmy and Alfredo have been hired by Ratatouille restaurant (a special restaurant from Euphoric State University) to investigate if it is possible to make the best recipes archive ever. They want to be able to work on indexing the prices at the same time, but they have run into problems doing this in the past. If they take turns, each one will spend a lot of time waiting for the other to finish, but if they work on their own copies and email changes back and forth things will be lost, overwritten, or duplicated.\nA colleague suggests using version control to manage their work. Version control is better than mailing files back and forth:\nNothing that is committed to version control is ever lost, unless you work really, really hard at losing it. Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.\nAs we have this record of who made what changes when, we know who to ask if we have questions later on, and, if needed, revert to a previous version, much like the “undo” feature in an editor.\nWhen several people collaborate in the same project, it’s possible to accidentally overlook or overwrite someone’s changes. The version control system automatically notifies users whenever there’s a conflict between one person’s work and another’s.\nTeams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).\nVersion control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system.\n\n\nIn this lesson we use Git from the Unix Shell. Some previous experience with the shell is expected, but isn’t mandatory.\nSo read pre-course material and install tools needed."
+  },
+  {
+    "objectID": "scripts/00_precourse.html#prerequisites",
+    "href": "scripts/00_precourse.html#prerequisites",
+    "title": "Setup",
+    "section": "",
+    "text": "In this lesson we use Git from the Unix Shell. Some previous experience with the shell is expected, but isn’t mandatory. We may need R and RStudio who wants to generate website through github."
   }
 ]

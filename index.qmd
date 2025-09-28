@@ -15,105 +15,160 @@ execute:
   freeze: false
 ---
 
-Welcome to the Day1
+Welcome to the workshop
 
-## 🧰 `Before Day 1`
+## 🧰 `Before 1st meeting`
 Read the `pre-course` ⬆️ and be prepared accordingly. You need following `tools` in the day 1:
 
 ::: {.callout-important collapse=true}
 ## 👉Tools
 
 - `WSL`/`Unix`/`Ubuntu`/`Shell` [The Unix Shell](https://swcarpentry.github.io/shell-novice/) tutorial
-- `R` (version ≥ 4.0)
+- `R` (version ≥ 4.4)
 - `RStudio`
-- Recommended packages in RStudio: `tidyverse`
-- `Plink` at Linux (https://zzz.bwh.harvard.edu/plink/dist/plink-latest.zip)
 :::
 
-## 📅 `Schedule of Day 1`
-| Day 1, Time                      | Topic                        | Instructor              |
+## 📅 `Schedule`
+| Day 1, Time duration                      | Topic                        | Instructor              |
 |---------------------------|------------------------------------|----------------|
-| 00.00-00.30| Git | Abu|
-| 00.45-1.30| Github | Abu|
-| 13.30-15.30| Lab (practical)| Abu| 
+| 00.00-01.30| Git | Abu|
+| 01.30-02.30| Github | Abu|
+| 02.30-03.30| Others| Abu| 
 
+#### `Prerequisites`
+In this workshop we use `Git` from the `Unix` `Shell.` Some previous experience with the shell is expected, but isn’t mandatory.
 
-
-## 🟢`At Day 1` 
+## 🟢`At 1st meeting` 
 Github, Git, Lab. 
 See up, bar headers ⬆️
 
-## 📚 Course materieals
-::: {.callout-important collapse=true}
-### 👉️ [Course materieals]()
+## 📚 Course Episodes (Chapters)
+See the '**Episode**' section (bars)
+- 01-basics: Automated Version Control
+- 02-setup: Setting up git
+- 03-create: Creating a Repository
+- 04-changes: Tracking Changes
+- 05-history: Exploring History
+- 06-ignore: Ignoring Things
+- 07-github: Remotes in GitHub
+- 08-collab: Collaborating
+- 09-conflict: Conflicts resolution
+- 10-open: Open Science
+- 11-licensing: Licensing
+- 12-citation: Citation
+- 13-hosting: Hosting
+- 14-supplemental-rstudio: Using Git from RStudio
 
-##### 1. Download this repository:
 
-```bash
-wget https://github.com/abu85/intro-to-linux-and-R/archive/refs/heads/main.zip . # download with 'wget' command
+## 📚 Course Overview
+
+Git and github in a nutshell:
+```{mermaid}
+flowchart LR
+  A[Directory] --> B(Stage)
+  B --> C{Repository }
+  C --> D[Remote or github]
+  
 ```
 
-##### 2. Extract and enter into the repository folder📁
-```bash
 
-unzip main.zip            # extract everything from the zip file to folder
 
-ls                        # see the file folder
+Commands (`git ...`): 
+which command works where?
+```{mermaid}
+sequenceDiagram
+  participant Directory
+  participant Stage
+  participant Repository
+  Note left of Directory: git init
+  Directory->>Stage: git add
+  Stage->>Repository: git commit
+  Repository->>Remote: git push
 
-cd intro-to-linux-and-R   # change and enter into the folder(directory)
 ```
 
-Or Clone this repository if are using (git):
-```bash
-git clone https://github.com/YOUR_USERNAME/intro-to-R-genomic-selection.git
-cd intro-to-linux-and-R
+----
+
+If you **change** anything at remote (github) then `pull`(fetch) changes at every level and repeat the cycle:
+
+```{mermaid}
+flowchart LR
+  A[Directory] --> B(Stage)
+  B --> C{Repository }
+  C --> D[Remote or github]
+  D --> A[Directory]
 ```
 
-#### 📚 Contents of the 📁 **intro-to-linux-and-R**
 
-```bash
-ls -la         # see the content
+```{mermaid}
+sequenceDiagram
+  participant Directory
+  participant Stage
+  participant Repository
+  participant Remote
+  Note left of Directory: git init
+  Note right of Directory: git status <br/>git branch <br/>git checkout
+  Directory->>Stage: git add
+  Stage->>Repository: git commit
+  Repository->>Remote: git push
+  Remote->>Directory: git pull
 ```
-It will be look like as follows
+  
+----
 
-_quarto.yml
-_quarto_old.yml  
-docs       
-index_files 
-practicals.md  
-`slides`
-_quarto_new.txt 
-_site
-index.qmd 
-`practicals`
-`scripts`        
-styles.css
-
-##### Important folders for you
-- `slides/`: Lecture slides
-- `scripts/`: Lecture R scripts for each topic
-- [Practicals](./practicals/practical_01_intro.html): RMarkdown files for hands-on exercises
-- `practicals/`: Sample genotype and phenotype datasets
-
-
-
-#####  3. Open the project in RStudio.
-
-##### 4. Install required packages:
-
-```r
-install.packages(c("tidyverse"??????)) 
+If you are **a team** of two people, you may like to work independently and then merge all:
+```{mermaid}
+flowchart LR
+  A[Directory] --> B(Stage 1)
+  A[Directory] --> C(Stage 2)
+  B --> D{Repository 1}
+  C --> E{Repository 2}
+  D --> F[Merge repository]
+  E --> F[Merge repository]
+  F --> G[Remote or Github]
+  G --> A[Directory]
 ```
 
-##### 5. After Lunch (Start with the practicals in the `practicals/` folder.)
+```{mermaid}
+sequenceDiagram
+  participant Directory
+  participant Stage
+  participant Repository
+  participant Remote
 
-##### 6. Extras:
+  Directory->>Directory: git init
+  loop check changes
+    Directory->>Directory: git status
+  end
+  
+  loop check branches
+    Directory->>Directory: git branch 
+  end
+  
+  loop create branches
+    Directory->>Directory: git checkout -b new_branch 
+  end
+  
+  Directory->>Stage: git add
+  Stage->>Repository: git commit
+  Directory->>Directory: git checkout main
+  Repository->>Repository: git merge new_branch
+  Repository->>Remote: git push
+  Remote-->>Directory: git pull
+```
 
-- `resources/`: Additional resources and cheat sheets
-- `solutions/`: Solutions to practical exercises
+----
 
-:::
+If you like to **download** your latest remote(github) repo to somewhere in your computer
 
+
+```{mermaid}
+flowchart TD
+  A[Remote or github] --> |git clone| B[New repository]
+
+```
+
+  
 
 ::: {.callout-tip}
 ## Tip
@@ -124,5 +179,5 @@ install.packages(c("tidyverse"??????))
 
 
 ## License
-
+This workshop is built from softwaerecarpentry lessons
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).

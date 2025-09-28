@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="keywords" content="Version Control, Git, GitHub">
 
-<title>precourse</title>
+<title>Setup</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,11 +21,44 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
@@ -100,6 +134,10 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-episodes">    
         <li>
+    <a class="dropdown-item" href="../episodes/00-summary.html">
+ <span class="dropdown-text">00 - Summary</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../episodes/01-basics.html">
  <span class="dropdown-text">01 - Git Basics</span></a>
   </li>  
@@ -157,31 +195,10 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href=".././scripts/01_intro_to_git.html"> 
-<span class="menu-text">Git</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href=".././scripts/02_intro_to_github.html"> 
-<span class="menu-text">GitHub</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href=".././scripts/03_repo_making.html"> 
-<span class="menu-text">Lab 1</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href=".././scripts/04_website.html"> 
-<span class="menu-text">Lab 2</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://swcarpentry.github.io/shell-novice/"> <i class="bi bi-softwerecarpentry" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="mailto:your.email@example.com"> <i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="mailto:abu.siddique@slu.se"> <i class="bi bi-envelope" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -202,10 +219,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#precourse-materials" id="toc-precourse-materials" class="nav-link active" data-scroll-target="#precourse-materials">Precourse materials</a>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#installing-git" id="toc-installing-git" class="nav-link" data-scroll-target="#installing-git">Installing Git</a></li>
+  <li><a href="#creating-a-github-account" id="toc-creating-a-github-account" class="nav-link" data-scroll-target="#creating-a-github-account">Creating a GitHub Account</a>
   <ul class="collapse">
-  <li><a href="#before-1st-meeting-make-sure-you-have-installed-unix-r-rstudio-in-your-pc" id="toc-before-1st-meeting-make-sure-you-have-installed-unix-r-rstudio-in-your-pc" class="nav-link" data-scroll-target="#before-1st-meeting-make-sure-you-have-installed-unix-r-rstudio-in-your-pc"><code>Before 1st meeting</code>: Make sure you have installed Unix, R, RStudio in your PC</a></li>
-  <li><a href="#tutorials" id="toc-tutorials" class="nav-link" data-scroll-target="#tutorials">Tutorials:</a></li>
+  <li><a href="#multi-factor-authentication" id="toc-multi-factor-authentication" class="nav-link" data-scroll-target="#multi-factor-authentication">Multi-factor Authentication</a></li>
+  </ul></li>
+  <li><a href="#preparing-your-working-directory" id="toc-preparing-your-working-directory" class="nav-link" data-scroll-target="#preparing-your-working-directory">Preparing Your Working Directory</a>
+  <ul class="collapse">
+  <li><a href="#r-and-rstudio-installation" id="toc-r-and-rstudio-installation" class="nav-link" data-scroll-target="#r-and-rstudio-installation">R and Rstudio installation:</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -213,18 +235,76 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Setup</h1>
+</div>
 
 
 
-<section id="precourse-materials" class="level2">
-<h2 class="anchored" data-anchor-id="precourse-materials">Precourse materials</h2>
-<p>Install or activate <strong>WSL or Unix</strong>, and install <strong>R and RStudio if you do not have them already before 1st meeting</strong>.</p>
-<p>We strongly recommend for <strong>those not yet familiar with UNIX and/or R to take this opportunity and take these online tutorials</strong>, since those are requirements for the workshop. This will help you to develop your programming skills and we can always learn a few tricks here and there, even if you are already experienced.</p>
-<section id="before-1st-meeting-make-sure-you-have-installed-unix-r-rstudio-in-your-pc" class="level3">
-<h3 class="anchored" data-anchor-id="before-1st-meeting-make-sure-you-have-installed-unix-r-rstudio-in-your-pc"><code>Before 1st meeting</code>: Make sure you have installed Unix, R, RStudio in your PC</h3>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>Version Control, Git, GitHub</p>
+  </div>
+</div>
+
+</header>
+
+
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>In this lesson we use Git from the Unix Shell. Some previous experience with the shell is expected, <em>but isn’t mandatory</em>. We may need R and RStudio who wants to generate website through github.</p>
 </section>
-<section id="tutorials" class="level3">
-<h3 class="anchored" data-anchor-id="tutorials">Tutorials:</h3>
+<section id="installing-git" class="level2">
+<h2 class="anchored" data-anchor-id="installing-git">Installing Git</h2>
+<p>Since several Carpentries lessons rely on Git, please see <a href="https://carpentries.github.io/workshop-template/install_instructions/#git">this section of the workshop template</a> for instructions on installing Git for various operating systems.</p>
+<ul>
+<li><a href="https://carpentries.github.io/workshop-template/install_instructions/#git">Git installation on Windows</a></li>
+<li><a href="https://carpentries.github.io/workshop-template/install_instructions/#git">Git installation on MacOS</a></li>
+<li><a href="https://carpentries.github.io/workshop-template/install_instructions/#git">Git installation on Linux</a></li>
+</ul>
+</section>
+<section id="creating-a-github-account" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-github-account">Creating a GitHub Account</h2>
+<p>You will need an account for <a href="https://github.com">GitHub</a> to follow episodes 7 &amp; 8 in this lesson.</p>
+<ol type="1">
+<li>Go to <a href="https://github.com" class="uri">https://github.com</a> and follow the “Sign up” link at the top-right of the window.</li>
+<li>Follow the instructions to create an account.</li>
+<li>Verify your email address with GitHub.</li>
+<li>Configure multifactor authentication (see below).</li>
+</ol>
+<section id="multi-factor-authentication" class="level3">
+<h3 class="anchored" data-anchor-id="multi-factor-authentication">Multi-factor Authentication</h3>
+<p>In 2023, GitHub introduced a requirement for all accounts to have <a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/about-two-factor-authentication">multi-factor authentication (2FA)</a> configured for extra security. Several options exist for setting up 2FA, which are summarised here:</p>
+<ol type="1">
+<li>If you already use an authenticator app, like <a href="https://support.google.com/accounts/answer/1066447?hl=en&amp;co=GENIE.Platform%3DiOS&amp;oco=0">Google Authenticator</a> or <a href="https://duo.com/product/multi-factor-authentication-mfa/duo-mobile-app">Duo Mobile</a> on your smartphone for example, <a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-a-totp-mobile-app">add GitHub to that app</a>.</li>
+<li>If you have access to a smartphone but do not already use an authenticator app, install one and <a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-a-totp-mobile-app">add GitHub to the app</a>.</li>
+<li>If you do not have access to a smartphone or do not want to install an authenticator app, you have two options:
+<ol type="1">
+<li><a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-text-messages">set up 2FA via text message</a> (<a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/countries-where-sms-authentication-is-supported">list of countries where authentication by SMS is supported</a>), or</li>
+<li><a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-a-security-key">use a hardware security key</a> like <a href="https://www.yubico.com/products/yubikey-5-overview/">YubiKey</a> or the <a href="https://store.google.com/us/product/titan_security_key?hl=en-US&amp;pli=1">Google Titan key</a>.</li>
+</ol></li>
+</ol>
+<p>The GitHub documentation provides <a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication">more details about configuring 2FA</a>.</p>
+<hr>
+</section>
+</section>
+<section id="preparing-your-working-directory" class="level2">
+<h2 class="anchored" data-anchor-id="preparing-your-working-directory">Preparing Your Working Directory</h2>
+<p>We’ll do our work in the <code>Desktop</code> folder so make sure you change your working directory to it with:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Desktop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="r-and-rstudio-installation" class="level3">
+<h3 class="anchored" data-anchor-id="r-and-rstudio-installation">R and Rstudio installation:</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -235,29 +315,23 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>Book Reading (pdf)</td>
-<td>chapter 1-9</td>
-<td><a href="https://github.com/ClaudiaBrauer/A-very-short-introduction-to-R/blob/8cbcfb1faa909b1d1fe044ae664e317ef29d278e/documents/A%20(very)%20short%20introduction%20to%20R.pdf">A (very) short introduction to R.pdf</a></td>
-</tr>
-<tr class="even">
 <td>Install &amp; activate <code>WSL</code> or <code>Unix</code></td>
 <td><em>For Windows user only</em></td>
 <td><a href="http://swcarpentry.github.io/shell-novice/">UNIX</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Install <code>R</code> itself and <code>RStudio</code> Desktop</td>
 <td>all participants</td>
 <td><a href="https://swcarpentry.github.io/r-novice-inflammation/">R &amp; RStudio</a></td>
 </tr>
 </tbody>
 </table>
-<p>https://swcarpentry.github.io/git-novice/04-changes.html</p>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>CC-BY 4.0</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -494,7 +568,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/yourdomain\.com");
+      var filterRegex = new RegExp("https:\/\/abu85\.github\.io\/git-github-workshop\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

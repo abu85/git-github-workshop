@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="keywords" content="software, data, lesson, The Carpentries">
+<meta name="keywords" content="Version Control, Git, GitHub">
 
 <title>Git &amp; github workshop</title>
 <style>
@@ -21,45 +21,10 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -104,6 +69,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="forest">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -135,6 +104,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Episodes</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-episodes">    
+        <li>
+    <a class="dropdown-item" href="./episodes/00-summary.html">
+ <span class="dropdown-text">00 - Summary</span></a>
+  </li>  
         <li>
     <a class="dropdown-item" href="./episodes/01-basics.html">
  <span class="dropdown-text">01 - Git Basics</span></a>
@@ -234,16 +207,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>software, data, lesson, The Carpentries</p>
+    <p>Version Control, Git, GitHub</p>
   </div>
 </div>
 
 </header>
 
 
-<p>Welcome to the Day1</p>
-<section id="before-day-1" class="level2">
-<h2 class="anchored" data-anchor-id="before-day-1">🧰 <code>Before Day 1</code></h2>
+<p>Welcome to the workshop</p>
+<section id="before-1st-meeting" class="level2">
+<h2 class="anchored" data-anchor-id="before-1st-meeting">🧰 <code>Before 1st meeting</code></h2>
 <p>Read the <code>pre-course</code> ⬆️ and be prepared accordingly. You need following <code>tools</code> in the day 1:</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -259,17 +232,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <ul>
 <li><code>WSL</code>/<code>Unix</code>/<code>Ubuntu</code>/<code>Shell</code> <a href="https://swcarpentry.github.io/shell-novice/">The Unix Shell</a> tutorial</li>
-<li><code>R</code> (version ≥ 4.0)</li>
+<li><code>R</code> (version ≥ 4.4)</li>
 <li><code>RStudio</code></li>
-<li>Recommended packages in RStudio: <code>tidyverse</code></li>
-<li><code>Plink</code> at Linux (https://zzz.bwh.harvard.edu/plink/dist/plink-latest.zip)</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
-<section id="schedule-of-day-1" class="level2">
-<h2 class="anchored" data-anchor-id="schedule-of-day-1">📅 <code>Schedule of Day 1</code></h2>
+<section id="schedule" class="level2">
+<h2 class="anchored" data-anchor-id="schedule">📅 <code>Schedule</code></h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 34%">
@@ -278,100 +249,193 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </colgroup>
 <thead>
 <tr class="header">
-<th>Day 1, Time</th>
+<th>Day 1, Time duration</th>
 <th>Topic</th>
 <th>Instructor</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>00.00-00.30</td>
+<td>00.00-01.30</td>
 <td>Git</td>
 <td>Abu</td>
 </tr>
 <tr class="even">
-<td>00.45-1.30</td>
+<td>01.30-02.30</td>
 <td>Github</td>
 <td>Abu</td>
 </tr>
 <tr class="odd">
-<td>13.30-15.30</td>
-<td>Lab (practical)</td>
+<td>02.30-03.30</td>
+<td>Others</td>
 <td>Abu</td>
 </tr>
 </tbody>
 </table>
+<section id="prerequisites" class="level4">
+<h4 class="anchored" data-anchor-id="prerequisites"><code>Prerequisites</code></h4>
+<p>In this workshop we use <code>Git</code> from the <code>Unix</code> <code>Shell.</code> Some previous experience with the shell is expected, but isn’t mandatory.</p>
 </section>
-<section id="at-day-1" class="level2">
-<h2 class="anchored" data-anchor-id="at-day-1">🟢<code>At Day 1</code></h2>
+</section>
+<section id="at-1st-meeting" class="level2">
+<h2 class="anchored" data-anchor-id="at-1st-meeting">🟢<code>At 1st meeting</code></h2>
 <p>Github, Git, Lab. See up, bar headers ⬆️</p>
 </section>
-<section id="course-materieals" class="level2">
-<h2 class="anchored" data-anchor-id="course-materieals">📚 Course materieals</h2>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="course-episodes-chapters" class="level2">
+<h2 class="anchored" data-anchor-id="course-episodes-chapters">📚 Course Episodes (Chapters)</h2>
+<p>See the ‘<strong>Episode</strong>’ section (bars) - 01-basics: Automated Version Control - 02-setup: Setting up git - 03-create: Creating a Repository - 04-changes: Tracking Changes - 05-history: Exploring History - 06-ignore: Ignoring Things - 07-github: Remotes in GitHub - 08-collab: Collaborating - 09-conflict: Conflicts resolution - 10-open: Open Science - 11-licensing: Licensing - 12-citation: Citation - 13-hosting: Hosting - 14-supplemental-rstudio: Using Git from RStudio</p>
+</section>
+<section id="course-overview" class="level2">
+<h2 class="anchored" data-anchor-id="course-overview">📚 Course Overview</h2>
+<p>Git and github in a nutshell:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Directory] --&gt; B(Stage)
+  B --&gt; C{Repository }
+  C --&gt; D[Remote or github]
+  
+</pre>
 </div>
-<div class="callout-title-container flex-fill">
-👉️ <a href="">Course materieals</a>
+<p></p></figure><p></p>
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<section id="download-this-repository" class="level5">
-<h5 class="anchored" data-anchor-id="download-this-repository">1. Download this repository:</h5>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/abu85/intro-to-linux-and-R/archive/refs/heads/main.zip . <span class="co"># download with 'wget' command</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="extract-and-enter-into-the-repository-folder" class="level5">
-<h5 class="anchored" data-anchor-id="extract-and-enter-into-the-repository-folder">2. Extract and enter into the repository folder📁</h5>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> main.zip            <span class="co"># extract everything from the zip file to folder</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>                        <span class="co"># see the file folder</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> intro-to-linux-and-R   <span class="co"># change and enter into the folder(directory)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Or Clone this repository if are using (git):</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/YOUR_USERNAME/intro-to-R-genomic-selection.git</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> intro-to-linux-and-R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="contents-of-the-intro-to-linux-and-r" class="level4">
-<h4 class="anchored" data-anchor-id="contents-of-the-intro-to-linux-and-r">📚 Contents of the 📁 <strong>intro-to-linux-and-R</strong></h4>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-la</span>         <span class="co"># see the content</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>It will be look like as follows</p>
-<p>_quarto.yml _quarto_old.yml<br>
-docs<br>
-index_files practicals.md<br>
-<code>slides</code> _quarto_new.txt _site index.qmd <code>practicals</code> <code>scripts</code><br>
-styles.css</p>
-<section id="important-folders-for-you" class="level5">
-<h5 class="anchored" data-anchor-id="important-folders-for-you">Important folders for you</h5>
-<ul>
-<li><code>slides/</code>: Lecture slides</li>
-<li><code>scripts/</code>: Lecture R scripts for each topic</li>
-<li><a href="./practicals/practical_01_intro.html">Practicals</a>: RMarkdown files for hands-on exercises</li>
-<li><code>practicals/</code>: Sample genotype and phenotype datasets</li>
-</ul>
-</section>
-<section id="open-the-project-in-rstudio." class="level5">
-<h5 class="anchored" data-anchor-id="open-the-project-in-rstudio.">3. Open the project in RStudio.</h5>
-</section>
-<section id="install-required-packages" class="level5">
-<h5 class="anchored" data-anchor-id="install-required-packages">4. Install required packages:</h5>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>??????)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="after-lunch-start-with-the-practicals-in-the-practicals-folder." class="level5">
-<h5 class="anchored" data-anchor-id="after-lunch-start-with-the-practicals-in-the-practicals-folder.">5. After Lunch (Start with the practicals in the <code>practicals/</code> folder.)</h5>
-</section>
-<section id="extras" class="level5">
-<h5 class="anchored" data-anchor-id="extras">6. Extras:</h5>
-<ul>
-<li><code>resources/</code>: Additional resources and cheat sheets</li>
-<li><code>solutions/</code>: Solutions to practical exercises</li>
-</ul>
-</section>
-</section>
+</div>
+<p>Commands (<code>git ...</code>): which command works where?</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+  participant Directory
+  participant Stage
+  participant Repository
+  Note left of Directory: git init
+  Directory-&gt;&gt;Stage: git add
+  Stage-&gt;&gt;Repository: git commit
+  Repository-&gt;&gt;Remote: git push
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<hr>
+<p>If you <strong>change</strong> anything at remote (github) then <code>pull</code>(fetch) changes at every level and repeat the cycle:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Directory] --&gt; B(Stage)
+  B --&gt; C{Repository }
+  C --&gt; D[Remote or github]
+  D --&gt; A[Directory]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+  participant Directory
+  participant Stage
+  participant Repository
+  participant Remote
+  Note left of Directory: git init
+  Note right of Directory: git status &lt;br/&gt;git branch &lt;br/&gt;git checkout
+  Directory-&gt;&gt;Stage: git add
+  Stage-&gt;&gt;Repository: git commit
+  Repository-&gt;&gt;Remote: git push
+  Remote-&gt;&gt;Directory: git pull
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<hr>
+<p>If you are <strong>a team</strong> of two people, you may like to work independently and then merge all:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Directory] --&gt; B(Stage 1)
+  A[Directory] --&gt; C(Stage 2)
+  B --&gt; D{Repository 1}
+  C --&gt; E{Repository 2}
+  D --&gt; F[Merge repository]
+  E --&gt; F[Merge repository]
+  F --&gt; G[Remote or Github]
+  G --&gt; A[Directory]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+  participant Directory
+  participant Stage
+  participant Repository
+  participant Remote
+
+  Directory-&gt;&gt;Directory: git init
+  loop check changes
+    Directory-&gt;&gt;Directory: git status
+  end
+  
+  loop check branches
+    Directory-&gt;&gt;Directory: git branch 
+  end
+  
+  loop create branches
+    Directory-&gt;&gt;Directory: git checkout -b new_branch 
+  end
+  
+  Directory-&gt;&gt;Stage: git add
+  Stage-&gt;&gt;Repository: git commit
+  Directory-&gt;&gt;Directory: git checkout main
+  Repository-&gt;&gt;Repository: git merge new_branch
+  Repository-&gt;&gt;Remote: git push
+  Remote--&gt;&gt;Directory: git pull
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<hr>
+<p>If you like to <strong>download</strong> your latest remote(github) repo to somewhere in your computer</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+  A[Remote or github] --&gt; |git clone| B[New repository]
+
+</pre>
+</div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -391,7 +455,7 @@ Tip
 </section>
 <section id="license" class="level2">
 <h2 class="anchored" data-anchor-id="license">License</h2>
-<p>This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+<p>This workshop is built from softwaerecarpentry lessons This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
 
 
 </section>
@@ -633,7 +697,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/yourdomain\.com");
+      var filterRegex = new RegExp("https:\/\/abu85\.github\.io\/git-github-workshop\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

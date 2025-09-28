@@ -17,6 +17,8 @@ website:
         href: ./scripts/00_precourse.html
       - text: "Episodes"
         menu:
+          - text: "00 - Summary"
+            href: episodes/00-summary.qmd
           - text: "01 - Git Basics"
             href: episodes/01-basics.qmd
           - text: "02 - Setup"
@@ -59,6 +61,8 @@ format:
     code-copy: true
     code-overflow: wrap
     highlight-style: github
+    mermaid:
+      theme: forest
 
 metadata-files:
   - config.yaml
